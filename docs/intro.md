@@ -1,35 +1,27 @@
 ---
+title: Example highlighting
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+import Highlighter from '@theme/Highlighter';
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## Secret reference example
 
-## Getting Started
-
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npm init docusaurus@latest my-website classic
+```shell [["a", 1, "Management"], ["b", 1, "PagerDuty"], ["c", 1, "Admin"], ["d", 1, "email"]]
+op://Management/PagerDuty/Admin/email
 ```
 
-## Start your site
+A secret reference consists of a <Highlighter badge="a">vault</Highlighter>, an <Highlighter badge="b">item</Highlighter>, an <Highlighter badge="c">optional section</Highlighter>, and a <Highlighter badge="d">field</Highlighter>.
 
-Run the development server:
+## Advanced example
 
-```shell
-cd my-website
-
-npx docusaurus start
+```js title="/src/components/HelloCodeTitle.js" showLineNumbers {1,4-6} [["1", 1, "metastring"], ["2", 2, "HIGHLIGHT_REGEX"], ["4", 7, "parsedMetastring[1]"]]
+function getHighlightLines(metastring) {
+  const HIGHLIGHT_REGEX = /{([\d,-]+)}/;
+  const parsedMetastring = HIGHLIGHT_REGEX.exec(metastring);
+  if (!parsedMetastring) {
+    return [];
+  }
+  return rangeParser(parsedMetastring[1]);
+}
 ```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and displays your changes.

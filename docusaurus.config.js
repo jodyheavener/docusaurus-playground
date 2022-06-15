@@ -41,7 +41,8 @@ const config = {
   ],
 
   plugins: [
-    './src/plugins/plugin-google-fonts.js'
+    './src/plugins/plugin-google-fonts.js',
+    './src/plugins/plugin-sandpack'
   ],
 
   themeConfig:

@@ -1,0 +1,20 @@
+.highlight {
+  display: inline;
+  border-radius: 3px;
+  padding: 2px 4px 2px 3px;
+}
+
+.highlight::before {
+  content: attr(data-badge);
+  font-weight: 600;
+  margin-right: 4px;
+  text-transform: uppercase;
+  background: #fff;
+  border-radius: 3px;
+  color: #111;
+  width: 14px;
+  height: 14px;
+  line-height: 15px;
+  display: inline-block;
+  text-align: center;
+}

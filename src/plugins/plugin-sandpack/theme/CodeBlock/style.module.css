@@ -1,0 +1,29 @@
+.lineHighlight {
+  background-color: #fff7e4;
+}
+
+html[data-theme="dark"] .lineHighlight {
+  background-color: #2d2821;
+}
+
+.inlineHighlight {
+  display: inline;
+  border-radius: 3px;
+  color: #fff;
+  padding: 2px 4px 2px 3px;
+}
+
+.inlineHighlight::before {
+  content: attr(data-badge);
+  font-weight: 600;
+  margin-right: 4px;
+  text-transform: uppercase;
+  background: #fff;
+  border-radius: 3px;
+  color: #111;
+  width: 14px;
+  height: 14px;
+  line-height: 15px;
+  display: inline-block;
+  text-align: center;
+}
