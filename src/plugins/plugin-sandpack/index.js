@@ -1,6 +1,6 @@
 const path = require("path");
 
-function theme() {
+function plugin() {
   return {
     name: "plugin-sandpack",
 
@@ -10,4 +10,4 @@ function theme() {
   };
 }
 
-module.exports = theme;
+module.exports = plugin;

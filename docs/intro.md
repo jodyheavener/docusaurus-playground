@@ -7,7 +7,7 @@ import Highlighter from '@theme/Highlighter';
 
 ## Secret reference example
 
-```shell [["a", 1, "Management"], ["b", 1, "PagerDuty"], ["c", 1, "Admin"], ["d", 1, "email"]]
+```shell showLineNumbers [["a", 1, "Management"], ["b", 1, "PagerDuty"], ["c", 1, "Admin"], ["d", 1, "email"]]
 op://Management/PagerDuty/Admin/email
 ```
 

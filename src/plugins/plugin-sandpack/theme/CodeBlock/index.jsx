@@ -69,8 +69,6 @@ const RenderSandpack = (props) => {
   );
 
   useEffect(() => {
-    console.log(decoratorPairs)
-    //
     // setCodeHighlights((existing) => ({ ...existing, ...decoratorPairs }));
   }, [decoratorPairs, setCodeHighlights])
 
@@ -103,16 +101,16 @@ function getHighlightLines(metastring) {
 }
 
 function getInlineHighlights(metastring, code) {
-  const INLINE_HIGHT_REGEX = /(\[\[.*\]\])/;
-  const parsedMetastring = INLINE_HIGHT_REGEX.exec(metastring);
+  const INLINE_HIGHLIGHT_REGEX = /(\[\[.*\]\])/;
+  const parsedMetastring = INLINE_HIGHLIGHT_REGEX.exec(metastring);
   if (!parsedMetastring) {
     return [];
   }
 
   const lines = code.split('\n');
-  const encodedHiglights = JSON.parse(parsedMetastring[1]);
+  const encodedHighlights = JSON.parse(parsedMetastring[1]);
 
-  return encodedHiglights.map(([badge, lineNo, substr, fromIndex]) => {
+  return encodedHighlights.map(([badge, lineNo, substr, fromIndex]) => {
     const line = lines[lineNo - 1];
     let index = line.indexOf(substr);
     const lastIndex = line.lastIndexOf(substr);
