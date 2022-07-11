@@ -15,6 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'jodyheavener', // Usually your GitHub org/user name.
   projectName: 'docusaurus-playground', // Usually your repo name.
+  trailingSlash: true,
 
   presets: [
     [
